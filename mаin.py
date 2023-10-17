@@ -64,8 +64,8 @@ files_c = os.listdir(folder_path)
 proxy_arr = []
 for file_p in files_p:
         file_path_proxy = os.path.join(folder_path_proxy1, file_p)
-        with open(file_path_proxy, "r") as file:
-            proxy = file.readlines()
+        with open(file_path_proxy, "r") as proxyFile:
+            proxy = proxyFile.readlines()
             proxy_arr.extend(proxy)        
 
 
