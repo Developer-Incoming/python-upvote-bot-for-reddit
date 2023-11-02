@@ -12,7 +12,7 @@ from selenium.webdriver.support import expected_conditions as EC
 
 
 url = input("Post URL: ")
-count_up = int(input("Upvotes amount: ")) 
+count_up = int(input("Upvotes amount: "))
 index = 0 # Counts the upvotes made.
 
 
@@ -66,19 +66,15 @@ for file_p in files_p:
         file_path_proxy = os.path.join(folder_path_proxy1, file_p)
         with open(file_path_proxy, "r") as proxyFile:
             proxy = proxyFile.readlines()
-            proxy_arr.extend(proxy)        
+            proxy_arr.extend(proxy)
 
 
 for file_c in files_c:
     file_path = os.path.join(folder_path, file_c) # Getting full path.
     proxy_df = random.randint(0,len(proxy_arr) - 1)
     upvote(file_path, proxy_arr[proxy_df])
-    index += 1 
+    index += 1
     # If the targeted amount of upvotes is made break.
     if index == count_up:
         print("Done")
         break
-
-
-
-
